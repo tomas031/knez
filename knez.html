@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Knez</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #message {
+                font-family: "Courier New";
+                color: red;
+                width: 100%;
+                text-align: center;
+                font-size: 25px;
+            }
+        </style>
+    </head>
+
+</style>
+<body>
+    <div id="message"></div>
+    <div id="scrollTo"></div>
+</body>
+<script>
+    var song = ["dal si ikada", "mene voljela", "kao tebe ja"];
+    window.setInterval(function () {
+        var index = Math.floor(Math.random() * (2 - 0 + 1) + 0);
+        document.getElementById("message").innerHTML += song[index] + "<br>";
+        document.getElementById("scrollTo").scrollIntoView();
+    }, 1000);
+</script>
+</html>
